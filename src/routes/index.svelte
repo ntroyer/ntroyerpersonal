@@ -1,4 +1,18 @@
 <style>
+	body {
+		animation: 1s ease-out 0s 1 slideIn;
+	}
+	@keyframes slideIn {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	h1, p {
 		text-align: center;
 		margin: 0 auto;
@@ -28,6 +42,8 @@
 	<title>Nat Troyer - Web Developer</title>
 </svelte:head>
 
-<h1>{title}</h1>
+<body>
+	<h1>{title}</h1>
 
-<p><strong>This page is built using Svelte with Sapper</strong></p>
+	<p>This page is built using Svelte with Sapper and Typescript.</p>
+</body>

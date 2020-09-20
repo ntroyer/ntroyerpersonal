@@ -4,26 +4,11 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #615c58;
 		font-weight: 300;
 		padding: 0 1em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
 	}
 
 	[aria-current] {
@@ -41,28 +26,25 @@
 		bottom: -1px;
 	}
 
-	h1 {
-
-	}
-
-	a {
+	.navbar a {
 		text-decoration: none;
+		text-transform: uppercase;
 		padding: 1em 0.5em;
 		display: block;
+		float: left;
 	}
 </style>
 
 <nav>
-	<ul>
-		<li><h1>Nat Troyer</h1></li>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-		<li><a aria-current="{segment === 'resume' ? 'page' : undefined}" href="resume">resume</a></li>
-		<li><a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">projects</a></li>
-		<li><a aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
+	<div class="title">
+		<h1>Nat Troyer</h1>
+	</div>
+	<div class="navbar">
+		<a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a>
+		<a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a>
+		<a aria-current="{segment === 'resume' ? 'page' : undefined}" href="resume">resume</a>
+		<a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">projects</a>
+		<a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a>
+		<a aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a>
+	</div>
 </nav>
