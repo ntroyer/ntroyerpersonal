@@ -20,10 +20,14 @@
 	}
 </style>
 
+<script lang="ts">
+	export let title: string = "Welcome to my Typescript web page!";
+</script>
+
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Nat Troyer - Web Developer</title>
 </svelte:head>
 
-<h1>Welcome to my web page!</h1>
+<h1>{title}</h1>
 
 <p><strong>This page is built using Svelte with Sapper</strong></p>
