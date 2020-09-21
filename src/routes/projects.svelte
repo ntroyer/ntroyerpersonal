@@ -1,18 +1,4 @@
-<style>
-	.projects {
-		animation: 2s fadeInRight;
-	}
-	@keyframes fadeInRight {
-		0% {
-			opacity: 0;
-			transform: translateX(40px);
-		}
-		100% {
-			opacity: 1; 
-			transform: translateX(0);
-		}
-	}
-
+<style>	
 	.project {
 		display: flex;
 		background-color: #274045;
@@ -42,30 +28,36 @@
 </style>
 
 <script lang="ts">
+	import { slide, fly } from "svelte/transition";
+	// todo - icon links to list technologies, and for places like github
 	let projects = [
 		{ 
 			name: 'Polyomino Painter', 
 			description: 'A Painting app that uses randomly generated polyominos as brushes.', 
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
+			giturl: '',
 		}, 
 		{ 
 			name: 'Table Topics Questions app', 
 			description: 'An app that generates Table Topics questions for Toastmasters, complete with a timer.', 
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
+			giturl: '',
 		}, 
 		{ 
 			name: 'Project 3', 
 			description: 'Coming soon...', 
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
+			giturl: '',
 		}, 
 		{ 
 			name: 'Project 4', 
 			description: 'Coming soon...', 
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
+			giturl: '',
 		}
 	];
 </script>
@@ -75,9 +67,9 @@
 </svelte:head>
 
 <div class="projects">
-	<h1>Projects</h1>
-	{#each projects as project}
-	<div class="project">
+	<h1 in:fly="{{y: 20, duration: 2000}}">Projects</h1>
+	{#each projects as project, index}
+	<div class="project" in:fly="{{x: 200, delay: (1 + index) * 200}}">
 		<div class="project-image">
 			<a href="{project.url}" target="_blank">
 				<img src="{project.img}" alt="Project" />
@@ -86,6 +78,7 @@
 		<div class="project-description">
 			<h2>{project.name}</h2>
 			<p>{project.description}</p>
+			<p>{index}</p>
 		</div>
 	</div>
 	{/each}
