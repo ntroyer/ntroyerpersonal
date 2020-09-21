@@ -1,6 +1,5 @@
 <style>
 	.about {
-		opacity: 0;
 		animation: 2s fadeInRight;
 	}
 	@keyframes fadeInRight {
@@ -17,11 +16,11 @@
 </style>
 
 <svelte:head>
-	<title>About</title>
+	<title>About Nat</title>
 </svelte:head>
 
 <div class="about">
 	<h1>About this site</h1>
 
-	<p>This is the 'about' page. There's not much here.</p>
+	<p>I am a web developer who enjoys using modern technologies to build quality websites.</p>
 </div>
