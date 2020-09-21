@@ -1,4 +1,8 @@
-<style>	
+<style>
+	.projects h1 {
+		text-align: center;
+	}
+
 	.project {
 		display: flex;
 		background-color: #274045;
@@ -28,7 +32,7 @@
 </style>
 
 <script lang="ts">
-	import { slide, fly } from "svelte/transition";
+	import { fly } from "svelte/transition";
 	// todo - icon links to list technologies, and for places like github
 	let projects = [
 		{ 
@@ -78,7 +82,6 @@
 		<div class="project-description">
 			<h2>{project.name}</h2>
 			<p>{project.description}</p>
-			<p>{index}</p>
 		</div>
 	</div>
 	{/each}

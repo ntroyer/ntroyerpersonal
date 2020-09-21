@@ -22,7 +22,7 @@
 
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	export let title: string = "Welcome to my Typescript web page!";
+	export let title: string = "Nat Troyer";
 </script>
 
 <svelte:head>
