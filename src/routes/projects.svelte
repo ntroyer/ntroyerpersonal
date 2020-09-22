@@ -29,6 +29,16 @@
 		padding-right: 10px;
 	}
 
+	.devicon-row {
+		position: relative;
+		letter-spacing: 5px;
+		font-size: 24px;
+	}
+
+	a {
+		color: #aaa5a0;
+	}
+
 </style>
 
 <script lang="ts">
@@ -41,6 +51,7 @@
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
 			giturl: '',
+			devicons: ['react', 'nodejs', 'html5', 'css3', 'npm', 'mongodb'],
 		}, 
 		{ 
 			name: 'Table Topics Questions app', 
@@ -48,6 +59,7 @@
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
 			giturl: '',
+			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'mongodb'],
 		}, 
 		{ 
 			name: 'Project 3', 
@@ -55,6 +67,7 @@
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
 			giturl: '',
+			devicons: ['nodejs', 'html5', 'css3']
 		}, 
 		{ 
 			name: 'Project 4', 
@@ -62,6 +75,7 @@
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
 			giturl: '',
+			devicons: ['nodejs', 'html5', 'css3']
 		}
 	];
 </script>
@@ -77,11 +91,24 @@
 		<div class="project-image">
 			<a href="{project.url}" target="_blank">
 				<img src="{project.img}" alt="Project" />
-			</a> 
+			</a>
 		</div>
 		<div class="project-description">
 			<h2>{project.name}</h2>
 			<p>{project.description}</p>
+			<div class="devicon-row">
+				{#each project.devicons as devicon}
+					{#if devicon === 'npm'}
+						<i class="devicon-npm-original-wordmark"></i>
+					{:else}
+						<i class="devicon-{devicon}-plain"></i>
+					{/if} 
+				{/each}
+				|
+				<a href='{project.giturl}'>
+					<i class="devicon-github-plain"></i>
+				</a>
+			</div>
 		</div>
 	</div>
 	{/each}

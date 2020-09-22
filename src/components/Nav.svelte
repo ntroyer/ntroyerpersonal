@@ -6,7 +6,6 @@
 	nav {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid #615c58;
 		background-color: #1c282c;
 		font-weight: 300;
 		padding: 0 1em;
@@ -33,6 +32,10 @@
 		padding: 1em 0.5em;
 		display: block;
 		float: left;
+	}
+
+	a {
+		color: #aaa5a0;
 	}
 
 	.material-icons {
