@@ -22,21 +22,35 @@
 	}
 
 	.project-description {
-		margin-top: 1.5em;
+		width: 530px;
+		margin-top: 1em;
 	}
 
 	.project-description p {
 		padding-right: 10px;
 	}
 
+	.description {
+		height: 130px;
+	}
+
 	.devicon-row {
 		position: relative;
 		letter-spacing: 5px;
-		font-size: 24px;
+		font-size: 30px;
 	}
 
 	a {
 		color: #aaa5a0;
+		text-decoration: none;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.github-icon {
+		float: right;
 	}
 
 </style>
@@ -93,23 +107,22 @@
 				<img src="{project.img}" alt="Project" />
 			</a>
 		</div>
-		<div class="project-description">
+		<table class="project-description">
 			<h2>{project.name}</h2>
-			<p>{project.description}</p>
-			<div class="devicon-row">
+			<tr class="description">
+				<p>{project.description}</p>
+			</tr>
+			<tr class="devicon-row">
 				{#each project.devicons as devicon}
 					{#if devicon === 'npm'}
 						<i class="devicon-npm-original-wordmark"></i>
 					{:else}
 						<i class="devicon-{devicon}-plain"></i>
-					{/if} 
+					{/if}
 				{/each}
-				|
-				<a href='{project.giturl}'>
-					<i class="devicon-github-plain"></i>
-				</a>
-			</div>
-		</div>
+				<a class="github-icon" href='{project.giturl}'><i class="devicon-github-plain"></i></a>
+			</tr>
+		</table>
 	</div>
 	{/each}
 </div>
