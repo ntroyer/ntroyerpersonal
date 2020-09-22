@@ -22,7 +22,7 @@
 	}
 
 	.project-description {
-		width: 530px;
+		width: calc(100% - 16.5em);
 		margin-top: 1em;
 	}
 
