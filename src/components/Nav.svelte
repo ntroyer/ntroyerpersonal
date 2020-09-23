@@ -27,7 +27,6 @@
 	}
 
 	.navbar a {
-		text-decoration: none;
 		text-transform: uppercase;
 		padding: 1em 0.5em;
 		display: block;
@@ -35,6 +34,7 @@
 	}
 
 	a {
+		text-decoration: none;
 		color: #aaa5a0;
 	}
 
@@ -42,11 +42,19 @@
 		padding-top: 2px;
 		font-size: 18px;
 	}
+
+	.title {
+		margin: auto 0;
+	}
+
+	.title h2 {
+		margin: 0 0 0.2em 0;
+	}
 </style>
 
 <nav>
 	<div class="title">
-		<h1>Nat Troyer</h1>
+		<h2><a href=".">Nat Troyer</a></h2>
 	</div>
 
 	<div class="navbar">
@@ -59,10 +67,10 @@
 		<a href="{process.env.EMAIL}" data-tooltip="Email">
 			<i class="material-icons">email</i>
 		</a>
-		<a href="{process.env.GITHUB_LINK}" data-tooltip="Github" target="_blank">
+		<a href="{process.env.GITHUB_LINK}" data-tooltip="GitHub" target="_blank">
 			<i class="devicon-github-plain"></i>
 		</a>
-		<a href="{process.env.LINKEDIN_LINK}" data-tooltip="Linkedin" target="_blank" >
+		<a href="{process.env.LINKEDIN_LINK}" data-tooltip="LinkedIn" target="_blank" >
 			<i class="devicon-linkedin-plain"></i>
 		</a>
 	</div>

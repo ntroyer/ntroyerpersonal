@@ -62,7 +62,7 @@
 
 <script lang="ts">
 	import { fly } from "svelte/transition";
-	// todo - icon links to list technologies, and for places like github
+	
 	let projects = [
 		{ 
 			name: 'Polyomino Painter', 
