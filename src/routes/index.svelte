@@ -22,6 +22,7 @@
 		justify-content: center;
 		list-style-type: none;
 		padding: 0;
+		margin: 3em auto;
 	}
 
 	li {
@@ -31,8 +32,12 @@
 		margin: 0 auto;
 	}
 
-	li:nth-child(even) {
+	.material-icons {
 		margin: 0;
+	}
+
+	.contact-icons i {
+		font-size: 72px;
 	}
 
 	@media (min-width: 480px) {
@@ -56,17 +61,24 @@
 
 	<p>Full-stack Web Developer with over 6 years of experience</p>
 	<ul>
+		<li><i class="material-icons">code</i></li>
 		<li><a href="about">About</a></li>
 		<li><i class="material-icons">code</i></li>
 		<li><a href="projects">Projects</a></li>
+		<li><i class="material-icons">code</i></li>
 	</ul>
-	<ul>
-		<li><a href="{process.env.RESUME_LINK}">Resume</a></li>
-		<li><i class="material-icons">code</i></li>
-		<li><a href="{process.env.EMAIL}">Email</a></li>
-		<li><i class="material-icons">code</i></li>
-		<li><a href="{process.env.GITHUB_LINK}">Github</a></li>
-		<li><i class="material-icons">code</i></li>
-		<li><a href="{process.env.LINKEDIN_LINK}">Linkedin</a></li>
+	<ul class="contact-icons">
+		<li in:fly="{{y: 20, duration: 2000, delay: 1000}}">
+			<a href="{process.env.RESUME_LINK}"><i class="material-icons">contact_page</i></a>
+		</li>
+		<li in:fly="{{y: 20, duration: 2000, delay: 1400}}">
+			<a href="{process.env.EMAIL}"><i class="material-icons">email</i></a>
+		</li>
+		<li in:fly="{{y: 20, duration: 2000, delay: 1800}}">
+			<a href="{process.env.GITHUB_LINK}"><i class="devicon-github-plain"></i></a>
+		</li>
+		<li in:fly="{{y: 20, duration: 2000, delay: 2200}}">
+			<a href="{process.env.LINKEDIN_LINK}"><i class="devicon-linkedin-plain"></i></a>
+		</li>
 	</ul>
 </div>
