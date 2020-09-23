@@ -6,7 +6,7 @@
 	nav {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid #615c58;
+		background-color: #1c282c;
 		font-weight: 300;
 		padding: 0 1em;
 	}
@@ -20,10 +20,10 @@
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
+		height: 3px;
+		background-color: rgb(0, 255, 255);
 		display: block;
-		bottom: -1px;
+		bottom: -3px;
 	}
 
 	.navbar a {
@@ -33,18 +33,37 @@
 		display: block;
 		float: left;
 	}
+
+	a {
+		color: #aaa5a0;
+	}
+
+	.material-icons {
+		padding-top: 2px;
+		font-size: 18px;
+	}
 </style>
 
 <nav>
 	<div class="title">
 		<h1>Nat Troyer</h1>
 	</div>
+
 	<div class="navbar">
 		<a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a>
 		<a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a>
-		<a aria-current="{segment === 'resume' ? 'page' : undefined}" href="resume">resume</a>
 		<a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">projects</a>
-		<a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a>
-		<a aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a>
+		<a href="{process.env.RESUME_LINK}" data-tooltip="Download Resume" target="_blank">
+			<i class="material-icons">contact_page</i>
+		</a>
+		<a href="{process.env.EMAIL}" data-tooltip="Email">
+			<i class="material-icons">email</i>
+		</a>
+		<a href="{process.env.GITHUB_LINK}" data-tooltip="Github" target="_blank">
+			<i class="devicon-github-plain"></i>
+		</a>
+		<a href="{process.env.LINKEDIN_LINK}" data-tooltip="Linkedin" target="_blank" >
+			<i class="devicon-linkedin-plain"></i>
+		</a>
 	</div>
 </nav>
