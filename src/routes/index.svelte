@@ -21,6 +21,7 @@
 		display: flex;
 		justify-content: center;
 		list-style-type: none;
+		padding: 0;
 	}
 
 	li {
@@ -60,12 +61,12 @@
 		<li><a href="projects">Projects</a></li>
 	</ul>
 	<ul>
-		<li>Resume</li>
+		<li><a href="{process.env.RESUME_LINK}">Resume</a></li>
 		<li><i class="material-icons">code</i></li>
-		<li>Email</li>
+		<li><a href="{process.env.EMAIL}">Email</a></li>
 		<li><i class="material-icons">code</i></li>
-		<li>Github</li>
+		<li><a href="{process.env.GITHUB_LINK}">Github</a></li>
 		<li><i class="material-icons">code</i></li>
-		<li>Linkedin</li>
+		<li><a href="{process.env.LINKEDIN_LINK}">Linkedin</a></li>
 	</ul>
 </div>

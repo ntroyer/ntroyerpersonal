@@ -49,8 +49,13 @@
 		margin: 0;
 	}
 
-	.github-icon {
+	.github-icon, .launch-icon {
 		float: right;
+		margin: auto 0.15em;
+	}
+
+	.launch-icon i {
+		font-size: 32px;
 	}
 
 </style>
@@ -121,6 +126,7 @@
 					{/if}
 				{/each}
 				<a class="github-icon" href='{project.giturl}'><i class="devicon-github-plain"></i></a>
+				<a class="launch-icon" href='{project.url}'><i class="material-icons">launch</i></a>
 			</tr>
 		</table>
 	</div>

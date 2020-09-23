@@ -53,14 +53,16 @@
 		<a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a>
 		<a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a>
 		<a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">projects</a>
-		<a aria-current="{segment === 'resume' ? 'page' : undefined}" href="resume">resume</a>
-		<a href="mailto:nathanaelatroyer@gmail.com">
-			<span class="material-icons">email</span>
+		<a href="{process.env.RESUME_LINK}" data-tooltip="Download Resume" target="_blank">
+			<i class="material-icons">contact_page</i>
 		</a>
-		<a href="https://github.com/ntroyer" target="_blank">
+		<a href="{process.env.EMAIL}" data-tooltip="Email">
+			<i class="material-icons">email</i>
+		</a>
+		<a href="{process.env.GITHUB_LINK}" data-tooltip="Github" target="_blank">
 			<i class="devicon-github-plain"></i>
 		</a>
-		<a href="https://www.linkedin.com/in/nathanaeltroyer/" target="_blank" >
+		<a href="{process.env.LINKEDIN_LINK}" data-tooltip="Linkedin" target="_blank" >
 			<i class="devicon-linkedin-plain"></i>
 		</a>
 	</div>

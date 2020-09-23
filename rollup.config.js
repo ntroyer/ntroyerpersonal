@@ -12,6 +12,10 @@ import typescript from "rollup-plugin-typescript2";
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+const githubLink = 'https://github.com/ntroyer';
+const linkedinLink = 'https://www.linkedin.com/in/nathanaeltroyer/';
+const email = 'mailto:nathanaelatroyer@gmail.com';
+const resumeLink = '';
 
 const onwarn = (warning, onwarn) =>
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
@@ -25,7 +29,11 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				'process.env.GITHUB_LINK': JSON.stringify(githubLink),
+				'process.env.LINKEDIN_LINK': JSON.stringify(linkedinLink),
+				'process.env.EMAIL': JSON.stringify(email),
+				'process.env.RESUME_LINK': JSON.stringify(resumeLink)
 			}),
 			svelte({
 				preprocess: autoPreprocess(),
