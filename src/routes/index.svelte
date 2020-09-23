@@ -9,8 +9,29 @@
 		margin: 0 0 0.5em 0;
 	}
 
+	a:link {
+		text-decoration: none;
+	}
+
 	p {
 		margin: 1em auto;
+	}
+
+	ul {
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+	}
+
+	li {
+		display: list-item;
+		font-size: 24px;
+		text-transform: uppercase;
+		margin: 0 auto;
+	}
+
+	li:nth-child(even) {
+		margin: 0;
 	}
 
 	@media (min-width: 480px) {
@@ -32,5 +53,19 @@
 <div in:fly="{{y: 20, duration: 2000}}">
 	<h1>{title}</h1>
 
-	<p>This page is built using Svelte with Sapper and Typescript.</p>
+	<p>Full-stack Web Developer with over 6 years of experience</p>
+	<ul>
+		<li><a href="about">About</a></li>
+		<li><i class="material-icons">code</i></li>
+		<li><a href="projects">Projects</a></li>
+	</ul>
+	<ul>
+		<li>Resume</li>
+		<li><i class="material-icons">code</i></li>
+		<li>Email</li>
+		<li><i class="material-icons">code</i></li>
+		<li>Github</li>
+		<li><i class="material-icons">code</i></li>
+		<li>Linkedin</li>
+	</ul>
 </div>

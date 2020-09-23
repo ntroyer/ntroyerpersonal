@@ -46,14 +46,13 @@
 
 <nav>
 	<div class="title">
-		<h1>Nat Troyer </h1>
+		<h1>Nat Troyer</h1>
 	</div>
 
 	<div class="navbar">
 		<a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a>
 		<a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a>
 		<a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">projects</a>
-		<a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a>
 		<a aria-current="{segment === 'resume' ? 'page' : undefined}" href="resume">resume</a>
 		<a href="mailto:nathanaelatroyer@gmail.com">
 			<span class="material-icons">email</span>
