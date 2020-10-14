@@ -10,15 +10,19 @@
 	}
 
 	.project-image {
-		min-width: 200px;
-		min-height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		max-width: 200px;
 		max-height: 200px;
 		border-radius: 5px;
-		background-position: center center;
-		background-repeat: no-repeat;
 		overflow: hidden;
 		margin: 1.5em;
+	}
+
+	.project-image a img {
+		padding-top: 24px;
+		padding-left: 3px;
 	}
 
 	.project-description {
@@ -67,7 +71,7 @@
 		{ 
 			name: 'Polyomino Painter', 
 			description: 'A Painting app that uses randomly generated polyominos as brushes.', 
-			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
+			img: '',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer/PolyominoPainter',
 			devicons: ['react', 'nodejs', 'html5', 'css3', 'yarn'],
@@ -75,7 +79,7 @@
 		{ 
 			name: 'Table Topics', 
 			description: 'An app that generates Table Topics questions for Toastmasters, complete with a timer.', 
-			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
+			img: '',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer/TableTopics',
 			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'npm'],
@@ -83,7 +87,7 @@
 		{ 
 			name: 'Project 3', 
 			description: 'Coming soon...', 
-			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
+			img: '',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer',
 			devicons: ['nodejs', 'html5', 'css3']
@@ -91,7 +95,7 @@
 		{ 
 			name: 'Project 4', 
 			description: 'Coming soon...', 
-			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
+			img: '',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer',
 			devicons: ['nodejs', 'html5', 'css3']
@@ -109,7 +113,7 @@
 	<div class="project" in:fly="{{x: 200, delay: (1 + index) * 200}}">
 		<div class="project-image">
 			<a href="{project.url}" target="_blank">
-				<img src="{project.img}" alt="Project" />
+				<img src="{project.img !== '' ? project.img : 'images/placeholder.gif'}" alt="{project.name}" />
 			</a>
 		</div>
 		<table class="project-description">
