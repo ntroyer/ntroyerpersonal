@@ -70,7 +70,7 @@
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer/PolyominoPainter',
-			devicons: ['react', 'nodejs', 'html5', 'css3', 'npm', 'mongodb'],
+			devicons: ['react', 'nodejs', 'html5', 'css3', 'yarn'],
 		}, 
 		{ 
 			name: 'Table Topics', 
@@ -78,7 +78,7 @@
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer/TableTopics',
-			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'mongodb'],
+			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'npm'],
 		}, 
 		{ 
 			name: 'Project 3', 

@@ -75,16 +75,16 @@
 	</ul>
 	<ul class="contact-icons">
 		<li in:fly="{{y: 20, duration: 2000, delay: 1000}}">
-			<a href="{process.env.RESUME_LINK}"><i class="material-icons">contact_page</i></a>
+			<a href="{process.env.RESUME_LINK}" data-tooltip="Resume"><i class="material-icons">contact_page</i></a>
 		</li>
 		<li in:fly="{{y: 20, duration: 2000, delay: 1400}}">
-			<a href="{process.env.EMAIL}"><i class="material-icons">email</i></a>
+			<a href="{process.env.EMAIL}" data-tooltip="Email"><i class="material-icons">email</i></a>
 		</li>
 		<li in:fly="{{y: 20, duration: 2000, delay: 1800}}">
-			<a href="{process.env.GITHUB_LINK}"><i class="devicon-github-plain"></i></a>
+			<a href="{process.env.GITHUB_LINK}" data-tooltip="GitHub"><i class="devicon-github-plain"></i></a>
 		</li>
 		<li in:fly="{{y: 20, duration: 2000, delay: 2200}}">
-			<a href="{process.env.LINKEDIN_LINK}"><i class="devicon-linkedin-plain"></i></a>
+			<a href="{process.env.LINKEDIN_LINK}" data-tooltip="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
 		</li>
 	</ul>
 </div>

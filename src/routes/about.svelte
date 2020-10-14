@@ -57,17 +57,17 @@
 
 	<ul class="devicon-list">
 		{#each techs as tech, index}
-			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (1 + index) * 200 }}"><i class="devicon-{tech}-plain"></i></li>
+			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (1 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
 		{/each}
 	</ul>
 	<ul class="devicon-list">
 		{#each techs2 as tech, index}
-			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (2 + index) * 200 }}"><i class="devicon-{tech}-plain"></i></li>
+			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (2 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
 		{/each}
 	</ul>
 	<ul class="devicon-list">
 		{#each techs3 as tech, index}
-			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (3 + index) * 200 }}"><i class="devicon-{tech}-plain"></i></li>
+			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (3 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
 		{/each}
 	</ul>
 

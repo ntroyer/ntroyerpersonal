@@ -44,17 +44,19 @@
 	}
 
 	.title {
-		margin: auto 0;
+		font-family: menlo, inconsolata, monospace;
+		font-size: 1.5rem;
 	}
 
 	.title h2 {
-		margin: 0 0 0.2em 0;
+		margin: 0.4rem 0 0 0;
 	}
+
 </style>
 
 <nav>
 	<div class="title">
-		<h2><a href=".">Nat Troyer</a></h2>
+		<h2><a href=".">nat</a></h2>
 	</div>
 
 	<div class="navbar">
