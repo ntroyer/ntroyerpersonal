@@ -108,7 +108,7 @@
 </svelte:head>
 
 <div class="projects">
-	<h1 in:fly="{{y: 20, duration: 2000}}">Projects</h1>
+	<h1 in:fly="{{y: 20, duration: 2000}}">Personal Projects</h1>
 	{#each projects as project, index}
 	<div class="project" in:fly="{{x: 200, delay: (1 + index) * 200}}">
 		<div class="project-image">

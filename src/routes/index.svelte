@@ -66,7 +66,7 @@
 	<h1>{title}</h1>
 
 	<p>Full-stack Web Developer with over 6 years of experience</p>
-	<ul>
+	<ul class="about-list">
 		<li> </li>
 		<li><a href="about">About</a></li>
 		<li><i class="material-icons">code</i></li>
