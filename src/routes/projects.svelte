@@ -69,15 +69,15 @@
 			description: 'A Painting app that uses randomly generated polyominos as brushes.', 
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
-			giturl: '',
+			giturl: 'https://github.com/ntroyer/PolyominoPainter',
 			devicons: ['react', 'nodejs', 'html5', 'css3', 'npm', 'mongodb'],
 		}, 
 		{ 
-			name: 'Table Topics Questions app', 
+			name: 'Table Topics', 
 			description: 'An app that generates Table Topics questions for Toastmasters, complete with a timer.', 
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
-			giturl: '',
+			giturl: 'https://github.com/ntroyer/TableTopics',
 			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'mongodb'],
 		}, 
 		{ 
@@ -85,7 +85,7 @@
 			description: 'Coming soon...', 
 			img: 'https://i.somethingawful.com/u/garbageday/2012/comedy_goldmine/tailsgetstrolled/moretailsgetstrolled/reaction.jpg',
 			url: 'https://www.google.com',
-			giturl: '',
+			giturl: 'https://github.com/ntroyer',
 			devicons: ['nodejs', 'html5', 'css3']
 		}, 
 		{ 
@@ -93,7 +93,7 @@
 			description: 'Coming soon...', 
 			img: 'https://i.kym-cdn.com/photos/images/original/001/186/279/de9.jpg',
 			url: 'https://www.google.com',
-			giturl: '',
+			giturl: 'https://github.com/ntroyer',
 			devicons: ['nodejs', 'html5', 'css3']
 		}
 	];
@@ -125,8 +125,8 @@
 						<i class="devicon-{devicon}-plain"></i>
 					{/if}
 				{/each}
-				<a class="github-icon" href='{project.giturl}'><i class="devicon-github-plain"></i></a>
-				<a class="launch-icon" href='{project.url}'><i class="material-icons">launch</i></a>
+				<a class="github-icon" href='{project.giturl}' target="_blank"><i class="devicon-github-plain"></i></a>
+				<a class="launch-icon" href='{project.url}' target="_blank"><i class="material-icons">launch</i></a>
 			</tr>
 		</table>
 	</div>

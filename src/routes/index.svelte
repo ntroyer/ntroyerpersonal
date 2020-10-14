@@ -37,12 +37,18 @@
 	}
 
 	.contact-icons i {
-		font-size: 72px;
+		font-size: 6rem;
 	}
 
 	@media (min-width: 480px) {
 		h1 {
-			font-size: 4em;
+			font-size: 4rem;
+		}
+	}
+
+	@media (max-width: 479px) {
+		.contact-icons i {
+			font-size: 4rem;
 		}
 	}
 </style>
@@ -61,11 +67,11 @@
 
 	<p>Full-stack Web Developer with over 6 years of experience</p>
 	<ul>
-		<li><i class="material-icons">code</i></li>
+		<li> </li>
 		<li><a href="about">About</a></li>
 		<li><i class="material-icons">code</i></li>
 		<li><a href="projects">Projects</a></li>
-		<li><i class="material-icons">code</i></li>
+		<li> </li>
 	</ul>
 	<ul class="contact-icons">
 		<li in:fly="{{y: 20, duration: 2000, delay: 1000}}">
