@@ -40,6 +40,55 @@
 		font-size: 6rem;
 	}
 
+	.main-webpage {
+		animation: 2s ease-out 0s 1 mainstart;
+	}
+	@keyframes mainstart {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}	
+	}
+
+	.resume-icon {
+		animation: 2s ease-in 2s 1 iconstart;
+		animation-fill-mode: forwards;
+		visibility: hidden;
+	}	
+
+	.email-icon {
+		animation: 2s ease-in 2.4s 1 iconstart;
+		animation-fill-mode: forwards;
+		visibility: hidden;
+	}
+
+	.github-icon {
+		animation: 2s ease-in 2.8s 1 iconstart;
+		animation-fill-mode: forwards;
+		visibility: hidden;
+	}
+
+	.linkedin-icon {
+		animation: 2s ease-in 3.2s 1 iconstart;
+		animation-fill-mode: forwards;
+		visibility: hidden;
+	}
+
+	@keyframes iconstart {
+		from {
+			opacity: 0;
+			transform: translate3d(0, 100%, 0);
+			visibility: visible;
+		}
+		to {
+			opacity: 1;
+			transform: none;
+			visibility: visible;
+		}
+	}
+
 	@media (min-width: 480px) {
 		h1 {
 			font-size: 4rem;
@@ -55,36 +104,37 @@
 
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	export let title: string = "Nat Troyer";
 </script>
 
 <svelte:head>
 	<title>Nat Troyer - Web Developer</title>
 </svelte:head>
 
-<div in:fly="{{y: 20, duration: 2000}}">
-	<h1>{title}</h1>
+<main>
+	<div class="main-webpage">
+		<h1>Nat Troyer</h1>
 
-	<p>Full-stack Web Developer with over 6 years of experience</p>
-	<ul class="about-list">
-		<li> </li>
-		<li><a href="about">About</a></li>
-		<li><i class="material-icons">code</i></li>
-		<li><a href="projects">Projects</a></li>
-		<li> </li>
-	</ul>
+		<p>Full-stack Web Developer with over 6 years of experience</p>
+		<ul class="about-list">
+			<li> </li>
+			<li><a href="about">About</a></li>
+			<li><i class="material-icons">code</i></li>
+			<li><a href="projects">Projects</a></li>
+			<li> </li>
+		</ul>
+	</div>
 	<ul class="contact-icons">
-		<li in:fly="{{y: 20, duration: 2000, delay: 1000}}">
+		<li class="resume-icon">
 			<a href="{process.env.RESUME_LINK}" data-tooltip="Resume"><i class="material-icons">contact_page</i></a>
 		</li>
-		<li in:fly="{{y: 20, duration: 2000, delay: 1400}}">
+		<li class="email-icon">
 			<a href="{process.env.EMAIL}" data-tooltip="Email"><i class="material-icons">email</i></a>
 		</li>
-		<li in:fly="{{y: 20, duration: 2000, delay: 1800}}">
+		<li class="github-icon">
 			<a href="{process.env.GITHUB_LINK}" data-tooltip="GitHub"><i class="devicon-github-plain"></i></a>
 		</li>
-		<li in:fly="{{y: 20, duration: 2000, delay: 2200}}">
+		<li class="linkedin-icon">
 			<a href="{process.env.LINKEDIN_LINK}" data-tooltip="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
 		</li>
 	</ul>
-</div>
+</main>

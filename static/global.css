@@ -28,6 +28,7 @@ i {
 	position: relative;
 	z-index: 2;
 	display: block;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
   
 [data-tooltip]:before,

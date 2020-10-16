@@ -8,7 +8,7 @@
 		justify-content: space-between;
 		background-color: #1c282c;
 		font-weight: 300;
-		padding: 0 1em;
+		padding: 0 1.6em;
 	}
 
 	[aria-current] {
