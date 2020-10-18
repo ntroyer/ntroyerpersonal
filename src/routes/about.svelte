@@ -21,13 +21,7 @@
 </style>
 
 <script lang="ts">
-
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-
-	onMount(() => {
-		console.log('welcome to about');
-	});
 
 	let techs = [
 		'php', 
