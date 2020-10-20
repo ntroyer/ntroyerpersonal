@@ -21,6 +21,7 @@
 </style>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
 	let techs = [
@@ -43,39 +44,44 @@
 		'typescript',
 		'react', 
 		'yarn'
-	]
+	];
+
+	let ready = false;
+	onMount(() => ready = true);
 </script>
 
 <svelte:head>
 	<title>About Nat</title>
 </svelte:head>
 
-<div class="about" in:fly="{{y: 20, duration: 2000}}">
-	<h1>About Me</h1>
+{#if ready}
+	<div class="about" in:fly="{{y: 20, duration: 2000}}">
+		<h1>About Me</h1>
 
-	<p>I am a web developer who enjoys using modern technologies to build quality websites. Below are some of the technologies I have used.</p>
+		<p>I am a web developer who enjoys using modern technologies to build quality websites. Below are some of the technologies I have used.</p>
 
-	<ul class="devicon-list">
-		{#each techs as tech, index}
-			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (1 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
-		{/each}
-	</ul>
-	<ul class="devicon-list">
-		{#each techs2 as tech, index}
-			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (2 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
-		{/each}
-	</ul>
-	<ul class="devicon-list">
-		{#each techs3 as tech, index}
-			<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (3 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
-		{/each}
-	</ul>
+		<ul class="devicon-list">
+			{#each techs as tech, index}
+				<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (1 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
+			{/each}
+		</ul>
+		<ul class="devicon-list">
+			{#each techs2 as tech, index}
+				<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (2 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
+			{/each}
+		</ul>
+		<ul class="devicon-list">
+			{#each techs3 as tech, index}
+				<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (3 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
+			{/each}
+		</ul>
 
-	<h1>About this site</h1>
+		<h1>About this site</h1>
 
-	<p>This website is written with Svelte and Sapper with the following libraries:</p>
-	<ul>
-		<li>Devicon (for the technology, Github and Linkedin icons)</li>
-		<li>Material (for the email, resume and frontpage icons)</li>
-	</ul>
-</div>
+		<p>This website is written with Svelte and Sapper with the following libraries:</p>
+		<ul>
+			<li>Devicon (for the technology, Github and Linkedin icons)</li>
+			<li>Material (for the email, resume and frontpage icons)</li>
+		</ul>
+	</div>
+{/if}

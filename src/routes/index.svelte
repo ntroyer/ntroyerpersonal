@@ -102,10 +102,6 @@
 	}
 </style>
 
-<script lang="ts">
-	import { fly } from 'svelte/transition';
-</script>
-
 <svelte:head>
 	<title>Nat Troyer - Web Developer</title>
 </svelte:head>

@@ -65,6 +65,7 @@
 </style>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { fly } from "svelte/transition";
 	
 	let projects = [
@@ -101,12 +102,16 @@
 			devicons: ['nodejs', 'html5', 'css3']
 		}
 	];
+
+	let ready = false;
+	onMount(() => ready = true);
 </script>
 
 <svelte:head>
 	<title>Nat's Projects</title>
 </svelte:head>
 
+{#if ready}
 <div class="projects">
 	<h1 in:fly="{{y: 20, duration: 2000}}">Personal Projects</h1>
 	{#each projects as project, index}
@@ -136,3 +141,4 @@
 	</div>
 	{/each}
 </div>
+{/if}
