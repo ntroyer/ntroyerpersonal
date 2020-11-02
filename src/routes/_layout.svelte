@@ -40,12 +40,20 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
+
+	.particles {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
 </style>
 
 <Nav {segment} />
 
 <!-- The below item needs to be styled -->
-<!--<svelte:component this="{ParticlesComponent}" id="tsparticles" options="{particlesConfig}" on:particlesLoaded="{onParticlesLoaded}" />-->
+<div class="particles">
+	<svelte:component this="{ParticlesComponent}" id="tsparticles" options="{particlesConfig}" on:particlesLoaded="{onParticlesLoaded}" />
+</div>
 <main>
 	<slot></slot>
 </main>
