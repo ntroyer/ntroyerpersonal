@@ -1600,6 +1600,11 @@ path-parse@^1.0.6:
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
 
+pathseg@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/pathseg/-/pathseg-1.2.0.tgz#22af051e28037671e7799e296fe96c5dcbe53acd"
+  integrity sha512-+pQS7lTaoVIXhaCW7R3Wd/165APzZHWzYVqe7dxzdupxQwebgpBaCmf0/XZwmoA/rkDq3qvzO0qv4d5oFVrBRw==
+
 picomatch@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
@@ -1864,6 +1869,14 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+svelte-particles@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/svelte-particles/-/svelte-particles-1.1.8.tgz#a4ea3b1f294c8e1bded8a685002a14b6da5e12ec"
+  integrity sha512-7Pg/CXX8UbNzk7pZ9RoalmFy0C+CqdiUufojXqiUF35nFaAhULTJWmSRmwmOwQ3HDBvH9CkEDdyqLm3Sruu78g==
+  dependencies:
+    tslib "^2.0.3"
+    tsparticles "^1.18.8"
+
 svelte-preprocess@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.3.0.tgz#7db318e9da4ac3fe22ec9671095533806ad76219"
@@ -1909,6 +1922,18 @@ tslib@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
+
+tslib@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
+  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+
+tsparticles@^1.18.8:
+  version "1.18.8"
+  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.18.8.tgz#bb374d06ebad21b02c914cf97ebd6df0c9f7033f"
+  integrity sha512-2KcpRMln2nIP/GsuRHmE85wRvOuWIwUh0rS/9ZcbSyrRKTGK6PjVAsNeaiWuSlNvx8Ij1ikjDZoBsfc+Ad8RFA==
+  optionalDependencies:
+    pathseg "^1.2.0"
 
 typescript@^4.0.3:
   version "4.0.3"

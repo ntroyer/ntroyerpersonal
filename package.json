@@ -13,7 +13,8 @@
     "devicon": "^2.2.0",
     "material-design-icons": "^3.0.1",
     "polka": "next",
-    "sirv": "^1.0.0"
+    "sirv": "^1.0.0",
+    "svelte-particles": "^1.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
