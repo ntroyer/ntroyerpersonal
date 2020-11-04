@@ -13,16 +13,28 @@
 	let particlesConfig = {
 		particles: {
 			color: {
-				value: "#00ffff"
+				value: ["#00e0e0", "#2d4a4a"]
 			},
 			move: {
-				direction: "left",
-				enable: true
+				direction: "none",
+				enable: true,
+				speed: 3
+			},
+			number: {
+				value: 15
+			},
+			opacity: {
+				value: 0.5
 			},
 			shape: {
-				type: "square"
+				type: "polygon",
+				polygon: {
+					"nb_sides": 6
+				}
 			},
-			speed: 20
+			size: {
+				value: 100
+			}
 		}
 	};
 
@@ -40,7 +52,8 @@
 		padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
-		background-color: #0d1011;
+		background-color: rgba(17, 22, 23, 1);
+		height: 95.8vh;
 	}
 
 	.particles {
