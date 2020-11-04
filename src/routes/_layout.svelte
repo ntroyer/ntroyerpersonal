@@ -15,13 +15,14 @@
 			color: {
 				value: "#00ffff"
 			},
-			links: {
-				enable: true,
-				color: "#00ffff"
-			},
 			move: {
+				direction: "left",
 				enable: true
 			},
+			shape: {
+				type: "square"
+			},
+			speed: 20
 		}
 	};
 
@@ -39,6 +40,7 @@
 		padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
+		background-color: #0d1011;
 	}
 
 	.particles {
