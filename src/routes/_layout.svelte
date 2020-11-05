@@ -18,7 +18,8 @@
 			move: {
 				direction: "none",
 				enable: true,
-				speed: 3
+				speed: 3,
+				out_mode: "bounce"
 			},
 			number: {
 				value: 15
@@ -33,7 +34,7 @@
 				}
 			},
 			size: {
-				value: 100
+				value: 120
 			}
 		}
 	};

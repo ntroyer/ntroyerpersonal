@@ -80,8 +80,9 @@
 
 		<p>This website is written with Svelte and Sapper with the following libraries:</p>
 		<ul>
-			<li>Devicon (for the technology, Github and Linkedin icons)</li>
-			<li>Material (for the email, resume and frontpage icons)</li>
+			<li><b>tsParticles</b>, for hexagon particle effects</li>
+			<li><b>Devicon</b>, for the technology, Github and Linkedin icons</li>
+			<li><b>Material</b>, for the email, resume and frontpage icons</li>
 		</ul>
 	</div>
 {/if}
