@@ -22,7 +22,7 @@
 		justify-content: center;
 		list-style-type: none;
 		padding: 0;
-		margin: 3em auto;
+		margin: 3.5em auto;
 	}
 
 	li {
@@ -38,6 +38,16 @@
 
 	.contact-icons i {
 		font-size: 6rem;
+	}
+
+	.about-list a {
+		padding: 0.8rem 7.2rem;
+		background-color: #1c282c;
+		border-radius: 5px;
+	}
+
+	.about-list a:hover {
+		background-color: #2d4a4a;
 	}
 
 	@media (min-width: 480px) {
@@ -72,11 +82,8 @@
 
 			<p>Full-stack Web Developer with over 6 years of experience</p>
 			<ul class="about-list">
-				<li> </li>
 				<li><a href="about">About</a></li>
-				<li><i class="material-icons">code</i></li>
 				<li><a href="projects">Projects</a></li>
-				<li> </li>
 			</ul>
 		</div>
 		<ul class="contact-icons">
