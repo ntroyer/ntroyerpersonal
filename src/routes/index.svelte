@@ -1,7 +1,11 @@
 <style>
-	h1, p {
+	h1, h3, p {
 		text-align: center;
 		margin: 0 auto;
+	}
+
+	h3 {
+		padding-right: 5px;
 	}
 
 	h1 {
@@ -23,6 +27,7 @@
 		list-style-type: none;
 		padding: 0;
 		margin: 3.5em auto;
+		text-align: center;
 	}
 
 	li {
@@ -77,15 +82,13 @@
 
 {#if ready}
 	<div in:fly="{{y: 20, duration: 2000}}">
-		<div class="main-webpage">
-			<h1>Nat Troyer</h1>
+		<h1>Nat Troyer</h1>
 
-			<p>Full-stack Web Developer with over 6 years of experience</p>
-			<ul class="about-list">
-				<li><a href="about">About</a></li>
-				<li><a href="projects">Projects</a></li>
-			</ul>
-		</div>
+		<h3>Full-Stack Web Developer</h3>
+		<ul class="about-list">
+			<li><a href="about">About</a></li>
+			<li><a href="projects">Projects</a></li>
+		</ul>
 		<ul class="contact-icons">
 			<li class="resume-icon">
 				<a href="{process.env.RESUME_LINK}" data-tooltip="Resume"><i class="material-icons">contact_page</i></a>
