@@ -58,7 +58,12 @@
 	<div class="about" in:fly="{{y: 20, duration: 2000}}">
 		<h1>About Me</h1>
 
-		<p>I am a web developer who enjoys using modern technologies to build quality websites. Below are some of the technologies I have used.</p>
+		<p>I'm Nat, a web developer based in Northern New Jersey. 
+			After taking a class on programming in high school, I realized that programming was my calling. 
+			I went on to pursue a career in software development, and obtained a Bachelor of Arts in Computer Science from Boston University.</p>
+		<p>I began my career building and maintaining PHP websites. 
+			Shortly after, I learned about NodeJs, and wanted to experiment with modern Javascript frameworks such as React, Angular and Express.</p>
+		<p>Below are some of the technologies I have used.</p>
 
 		<ul class="devicon-list">
 			{#each techs as tech, index}
@@ -78,11 +83,6 @@
 
 		<h1>About this site</h1>
 
-		<p>This website is written with Svelte and Sapper with the following libraries:</p>
-		<ul>
-			<li><b>tsParticles</b>, for hexagon particle effects</li>
-			<li><b>Devicon</b>, for the technology, Github and Linkedin icons</li>
-			<li><b>Material</b>, for the email, resume and frontpage icons</li>
-		</ul>
+		<p>This website is written with <b>Svelte</b> and <b>Sapper</b>, with <b>tsParticles</b> for the hexagon particle effects.</p>
 	</div>
 {/if}
