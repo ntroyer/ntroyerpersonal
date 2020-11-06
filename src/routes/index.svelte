@@ -91,16 +91,16 @@
 		</ul>
 		<ul class="contact-icons">
 			<li class="resume-icon">
-				<a href="{process.env.RESUME_LINK}" data-tooltip="Resume"><i class="material-icons">contact_page</i></a>
+				<a href="{process.env.RESUME_LINK}" data-tooltip="Resume" target="_blank"><i class="material-icons">contact_page</i></a>
 			</li>
 			<li class="email-icon">
 				<a href="{process.env.EMAIL}" data-tooltip="Email"><i class="material-icons">email</i></a>
 			</li>
 			<li class="github-icon">
-				<a href="{process.env.GITHUB_LINK}" data-tooltip="GitHub"><i class="devicon-github-plain"></i></a>
+				<a href="{process.env.GITHUB_LINK}" data-tooltip="GitHub" target="_blank"><i class="devicon-github-plain"></i></a>
 			</li>
 			<li class="linkedin-icon">
-				<a href="{process.env.LINKEDIN_LINK}" data-tooltip="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+				<a href="{process.env.LINKEDIN_LINK}" data-tooltip="LinkedIn" target="_blank"><i class="devicon-linkedin-plain"></i></a>
 			</li>
 		</ul>
 	</div>
