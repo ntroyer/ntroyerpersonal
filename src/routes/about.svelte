@@ -59,7 +59,7 @@
 		<h1>About Me</h1>
 
 		<p>I'm Nat, a web developer based in Northern New Jersey. 
-			After taking a class on programming in high school, I realized that programming was my calling. 
+			I've always enjoyed playing games and working on computers since I was little. After taking a class on programming in high school, I realized that programming was my calling. 
 			I went on to pursue a career in software development, and obtained a Bachelor of Arts in Computer Science from Boston University.</p>
 		<p>I began my career building and maintaining PHP websites. 
 			Shortly after, I learned about NodeJs, and wanted to experiment with modern Javascript frameworks such as React, Angular and Express.</p>
