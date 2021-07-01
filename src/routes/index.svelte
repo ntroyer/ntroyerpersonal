@@ -1,5 +1,5 @@
 <style>
-	h1, h3, p {
+	h1, h3 {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -15,10 +15,6 @@
 
 	a:link {
 		text-decoration: none;
-	}
-
-	p {
-		margin: 1em auto;
 	}
 
 	ul {
