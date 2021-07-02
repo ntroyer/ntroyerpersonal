@@ -20,6 +20,10 @@
 		margin: 1.5em;
 	}
 
+	.project-image-responsive {
+		display: none;
+	}
+
 	.project-image a img {
 		padding-top: 24px;
 		padding-left: 3px;
@@ -60,6 +64,57 @@
 
 	.launch-icon i {
 		font-size: 32px;
+	}
+
+	.link-row {
+		display: none;
+	}
+
+	@media (max-width: 479px) {
+		.project-description {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.project-image {
+			display: none;
+		}
+
+		.project-image-responsive {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 200px;
+			max-height: 200px;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 1.5em;
+		}
+
+		.devicon-row .github-icon, .devicon-row .launch-icon {
+			display: none;
+		}
+
+		.link-row {
+			display: block;
+			position: relative;
+			font-size: 30px;
+			letter-spacing: 85px;
+			text-align: center;
+		}
+
+		.link-row .launch-icon {
+			margin-top: 4px;
+		}
+
+		.description {
+			height: 100px;
+		}
+
+		.project-description {
+			margin-bottom: 1em;
+		}
 	}
 
 </style>
@@ -123,6 +178,11 @@
 		</div>
 		<table class="project-description">
 			<h2>{project.name}</h2>
+			<div class="project-image-responsive">
+				<a href="{project.url}" target="_blank">
+					<img src="{project.img !== '' ? project.img : 'images/placeholder.gif'}" alt="{project.name}" />
+				</a>
+			</div>
 			<tr class="description">
 				<p>{project.description}</p>
 			</tr>
@@ -134,6 +194,10 @@
 						<i class="devicon-{devicon}-plain"></i>
 					{/if}
 				{/each}
+				<a class="github-icon" href='{project.giturl}' target="_blank"><i class="devicon-github-plain"></i></a>
+				<a class="launch-icon" href='{project.url}' target="_blank"><i class="material-icons">launch</i></a>
+			</tr>
+			<tr class="link-row">
 				<a class="github-icon" href='{project.giturl}' target="_blank"><i class="devicon-github-plain"></i></a>
 				<a class="launch-icon" href='{project.url}' target="_blank"><i class="material-icons">launch</i></a>
 			</tr>
