@@ -1,5 +1,11 @@
 <script>
 	export let segment;
+
+	let hamburgerChecked = false;
+
+	function toggleHamburger() {
+		hamburgerChecked = !hamburgerChecked;
+	}
 </script>
 
 <style>
@@ -79,7 +85,10 @@
 		}
 
 		#hamburger:checked ~ .hamitems {
-			display: block;
+			display: block;	
+		}
+
+		.hamitems {
 			position: fixed;
 			top: 52px;
 			left: 0;
@@ -128,12 +137,12 @@
 		</a>
 	</div>
 	<nav class="hamnav">
-		<input type="checkbox" id="hamburger" checked="" />
+		<input type="checkbox" id="hamburger" bind:checked={hamburgerChecked} />
 		<label for="hamburger">&#9776;</label>
 		<div class="hamitems">
-			<a href=".">home</a>
-			<a href="about">about</a>
-			<a href="projects">projects</a>
+			<a href="." on:click={toggleHamburger}>home</a>
+			<a href="about" on:click={toggleHamburger}>about</a>
+			<a href="projects" on:click={toggleHamburger}>projects</a>
 		</div>
 	</nav>
 </nav>
