@@ -92,6 +92,11 @@
 			margin: 1.5em;
 		}
 
+		.project-image-responsive a img {
+			margin-top: 25px;
+			margin-left: 2px;
+		}
+
 		.devicon-row .github-icon, .devicon-row .launch-icon {
 			display: none;
 		}

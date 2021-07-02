@@ -9,6 +9,9 @@
 		background-color: #1c282c;
 		font-weight: 300;
 		padding: 0 1.6em;
+		position: sticky;
+		top: 0;
+		z-index: 3;
 	}
 
 	[aria-current] {
@@ -33,6 +36,14 @@
 		float: left;
 	}
 
+	.mainnav {
+		border-bottom: 2px solid rgba(17, 22, 23, 1);
+	}
+
+	.hamnav, .hamitems {
+		display: none;
+	}
+
 	a {
 		text-decoration: none;
 		color: #aaa5a0;
@@ -52,9 +63,49 @@
 		margin: 0.4rem 0 0 0;
 	}
 
+	nav label, #hamburger {
+		display: none;
+	}
+
+	@media (max-width: 479px) {
+		.navbar {
+			display: none;
+		}
+
+		nav label {
+			display: inline-block;
+			font-size: 35px;
+			color: #aaa5a0;
+		}
+
+		#hamburger:checked ~ .hamitems {
+			display: block;
+			position: fixed;
+			top: 52px;
+			left: 0;
+			right: 0;
+		}
+
+		.hamitems a {
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 10px;
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			background-color: #1c282c;
+			border: 2px solid rgba(17, 22, 23, 1);
+		}
+
+		.hamnav {
+			display: flex;
+			padding: 0;
+		}
+	}
 </style>
 
-<nav>
+<nav class="mainnav">
 	<div class="title">
 		<h2><a href=".">nat</a></h2>
 	</div>
@@ -76,4 +127,13 @@
 			<i class="devicon-linkedin-plain"></i>
 		</a>
 	</div>
+	<nav class="hamnav">
+		<input type="checkbox" id="hamburger" checked="" />
+		<label for="hamburger">&#9776;</label>
+		<div class="hamitems">
+			<a href=".">home</a>
+			<a href="about">about</a>
+			<a href="projects">projects</a>
+		</div>
+	</nav>
 </nav>

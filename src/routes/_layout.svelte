@@ -54,13 +54,19 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 		background-color: rgba(17, 22, 23, 1);
-		height: 95.8vh;
+		height: 95.6vh;
 	}
 
 	.particles {
 		position: fixed;
 		width: 100%;
 		height: 100%;
+	}
+
+	@media (max-width: 479px) {
+		main {
+			height: 100%;
+		}
 	}
 </style>
 
