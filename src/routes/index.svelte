@@ -47,6 +47,10 @@
 		border-radius: 5px;
 	}
 
+	.about-list li:nth-child(even) a {
+		padding: 0.8rem 6.3rem;
+	}
+
 	.about-list a:hover {
 		background-color: #2d4a4a;
 	}
@@ -60,6 +64,12 @@
 	@media (max-width: 479px) {
 		.contact-icons i {
 			font-size: 4rem;
+		}
+		.about-list {
+			display: block;
+		}
+		.about-list li {
+			margin: 35px auto;
 		}
 	}
 </style>

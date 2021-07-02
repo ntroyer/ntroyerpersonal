@@ -18,6 +18,12 @@
 		margin: 0 auto;
 	}
 
+	@media (max-width: 479px) {
+		.devicon-list li:first-child, .devicon-list li:last-child {
+			display: none;
+		}
+	}
+
 </style>
 
 <script lang="ts">
