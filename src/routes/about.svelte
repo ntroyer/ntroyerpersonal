@@ -3,12 +3,16 @@
 		text-align: center;
 	}
 
-	.devicon-list {
+	.devicon-list, .devicon-list-responsive {
 		display: flex;
 		justify-content: center;
 		list-style-type: none;
 		margin: 4em auto;
 		padding: 0;
+	}
+
+	.devicon-list-responsive {
+		display: none;
 	}
 
 	.devicon {
@@ -19,8 +23,15 @@
 	}
 
 	@media (max-width: 479px) {
-		.devicon-list li:first-child, .devicon-list li:last-child {
+		.devicon-list li:last-child {
 			display: none;
+		}
+		.devicon-list, .devicon-list-responsive {
+			display: flex;
+			margin: 0 auto 2em;
+		}
+		.devicon-list:first-of-type {
+			margin-top: 2em;
 		}
 	}
 
@@ -34,22 +45,30 @@
 		'php', 
 		'html5', 
 		'css3',
-		'javascript', 
-		'jquery', 
+		'javascript'
 	];
 	let techs2 = [
 		'mysql', 
-		'laravel', 
-		'symfony',
-		'angularjs', 
-		'nodejs', 
+		'laravel',
+		'typescript', 
+		'jquery', 
 	];
 	let techs3 = [
 		'mongodb', 
-		'couchdb', 
-		'typescript',
-		'react', 
-		'yarn'
+		'react',
+		'angularjs', 
+		'nodejs',
+	];
+	let techsres = [
+		'javascript',
+		'jquery',
+		'nodejs',
+	]
+
+	let descriptions = [
+		"I'm Nat Troyer, a web developer based in Northern New Jersey. I've always enjoyed playing games and working on computers since I was little. After taking a class on programming in high school, I realized that programming was my calling. I went on to pursue a career in software development, and obtained a Bachelor of Arts in Computer Science from Boston University.",
+		"I began my career building and maintaining PHP websites for a small company in Nanuet, NY called RustyBrick. Shortly after, I learned about Node.js, and wanted to experiment with modern Javascript frameworks such as React, Angular and Svelte.",
+		"Below are some of the technologies I have used."
 	];
 
 	let ready = false;
@@ -64,15 +83,17 @@
 	<div class="about" in:fly="{{y: 20, duration: 2000}}">
 		<h1>About Me</h1>
 
-		<p>I'm Nat, a web developer based in Northern New Jersey. 
-			I've always enjoyed playing games and working on computers since I was little. After taking a class on programming in high school, I realized that programming was my calling. 
-			I went on to pursue a career in software development, and obtained a Bachelor of Arts in Computer Science from Boston University.</p>
-		<p>I began my career building and maintaining PHP websites. 
-			Shortly after, I learned about NodeJs, and wanted to experiment with modern Javascript frameworks such as React, Angular and Express.</p>
-		<p>Below are some of the technologies I have used.</p>
+		{#each descriptions as description}
+		<p>{description}</p>
+		{/each}
 
 		<ul class="devicon-list">
 			{#each techs as tech, index}
+				<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (1 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
+			{/each}
+		</ul>
+		<ul class="devicon-list-responsive">
+			{#each techsres as tech, index}
 				<li class="devicon" in:fly="{{y: 20, duration: 1000, delay: (1 + index) * 200 }}" data-tooltip="{tech}"><i class="devicon-{tech}-plain"></i></li>
 			{/each}
 		</ul>

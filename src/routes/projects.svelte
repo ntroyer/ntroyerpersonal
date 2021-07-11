@@ -75,6 +75,11 @@
 			text-align: center;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 1em;
+		}
+
+		.project-description tr p {
+			margin-bottom: revert;
 		}
 
 		.project-image {
@@ -116,10 +121,6 @@
 		.description {
 			height: 100px;
 		}
-
-		.project-description {
-			margin-bottom: 1em;
-		}
 	}
 
 </style>
@@ -130,37 +131,28 @@
 	
 	let projects = [
 		{ 
-			name: 'Table Topics', 
-			description: 'An app that generates Table Topics questions for Toastmasters, complete with a timer.', 
-			img: '',
+			name: 'Toastmasters Table Topics', 
+			description: 'An Angular app that generates Table Topics questions for Toastmasters, complete with a timer. This app has been used by my club - Park Toastmasters in Ramsey, NJ - several times for Table Topics when we conduct meetings over Zoom.', 
+			img: 'images/ttlogo.png',
 			url: 'https://ntroyer.github.io/TableTopics',
 			giturl: 'https://github.com/ntroyer/TableTopics',
 			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'npm'],
 		}, 
 		{ 
 			name: 'Polyomino Painter', 
-			description: 'A Painting app that uses randomly generated polyominos as brushes.', 
-			img: '',
+			description: 'A painting app that uses randomly generated polyominos as brushes. Users can customize their brush by toggling the individual cells in the brush editor. Supports erasing, filling and color picking. This project stemmed from a grid-based game I was attempting to make.', 
+			img: 'images/polylogo.png',
 			url: 'https://ntroyer.github.io/PolyominoPainter/',
 			giturl: 'https://github.com/ntroyer/PolyominoPainter',
 			devicons: ['react', 'nodejs', 'html5', 'css3', 'yarn'],
 		},  
-		
 		{ 
-			name: 'Project 3', 
-			description: 'Coming soon...', 
-			img: '',
+			name: 'Personal website', 
+			description: 'This website is written by me in Svelte, using Sapper for routing between pages. Pageload animations are done using Svelte. Each page is a separate component', 
+			img: 'logo-192.png',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer',
-			devicons: ['nodejs', 'html5', 'css3']
-		}, 
-		{ 
-			name: 'Project 4', 
-			description: 'Coming soon...', 
-			img: '',
-			url: 'https://www.google.com',
-			giturl: 'https://github.com/ntroyer',
-			devicons: ['nodejs', 'html5', 'css3']
+			devicons: ['javascript', 'nodejs', 'html5', 'css3', 'yarn']
 		}
 	];
 
