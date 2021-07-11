@@ -130,21 +130,22 @@
 	
 	let projects = [
 		{ 
-			name: 'Polyomino Painter', 
-			description: 'A Painting app that uses randomly generated polyominos as brushes.', 
-			img: '',
-			url: 'https://www.google.com',
-			giturl: 'https://github.com/ntroyer/PolyominoPainter',
-			devicons: ['react', 'nodejs', 'html5', 'css3', 'yarn'],
-		}, 
-		{ 
 			name: 'Table Topics', 
 			description: 'An app that generates Table Topics questions for Toastmasters, complete with a timer.', 
 			img: '',
-			url: 'https://www.google.com',
+			url: 'https://ntroyer.github.io/TableTopics',
 			giturl: 'https://github.com/ntroyer/TableTopics',
 			devicons: ['angularjs', 'nodejs', 'html5', 'css3', 'npm'],
 		}, 
+		{ 
+			name: 'Polyomino Painter', 
+			description: 'A Painting app that uses randomly generated polyominos as brushes.', 
+			img: '',
+			url: 'https://ntroyer.github.io/PolyominoPainter/',
+			giturl: 'https://github.com/ntroyer/PolyominoPainter',
+			devicons: ['react', 'nodejs', 'html5', 'css3', 'yarn'],
+		},  
+		
 		{ 
 			name: 'Project 3', 
 			description: 'Coming soon...', 
