@@ -148,7 +148,7 @@
 		},  
 		{ 
 			name: 'Personal website', 
-			description: 'This website is written by me in Svelte, using Sapper for routing between pages. Pageload animations are done using Svelte. Each page is a separate component', 
+			description: 'This website is written by me in Svelte, using Sapper for routing. Each page is a separate component.', 
 			img: 'images/personalpage.png',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer',

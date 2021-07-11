@@ -66,10 +66,10 @@
 	]
 
 	let descriptions = [
-		"I'm Nat Troyer, a web developer based in Northern New Jersey. I've always enjoyed playing games and working on computers since I was little. After taking a class on programming in high school, I realized that programming was my calling. I went on to pursue a career in software development, and obtained a Bachelor of Arts in Computer Science from Boston University.",
+		"I'm Nat Troyer, a web developer based in Northern New Jersey. I've always enjoyed playing computer games since I was little. After taking a class on programming in high school, I wanted to pursue a career in programming. I went on to obtain a Bachelor of Arts in Computer Science from Boston University.",
 		"I began my career building and maintaining PHP websites for a small web development company in Nanuet, NY called RustyBrick. I worked on everything from small charity websites to complex SaaS applications used by hundreds of organizations.",
 		"When I learned about Node.js, I wanted to experiment with modern Javascript frameworks such as React, Angular and Svelte.",
-		"Below are some of the technologies I have used."
+		"Below are some of the technologies I like to work with."
 	];
 
 	let ready = false;
