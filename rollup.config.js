@@ -15,7 +15,7 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 const githubLink = 'https://github.com/ntroyer';
 const linkedinLink = 'https://www.linkedin.com/in/nathanaeltroyer/';
 const email = 'mailto:nathanaelatroyer@gmail.com';
-const resumeLink = '';
+const resumeLink = 'assets/NatResume.pdf';
 
 const onwarn = (warning, onwarn) =>
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||

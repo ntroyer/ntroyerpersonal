@@ -31,7 +31,7 @@
 
 	.project-description {
 		width: calc(100% - 16.5em);
-		margin-top: 1em;
+		margin: 1em auto;
 	}
 
 	.project-description p {
@@ -98,8 +98,9 @@
 		}
 
 		.project-image-responsive a img {
-			margin-top: 25px;
 			margin-left: 2px;
+			width: 200px;
+			height: 200px;
 		}
 
 		.devicon-row .github-icon, .devicon-row .launch-icon {
@@ -150,8 +151,8 @@
 			name: 'Personal website', 
 			description: 'This website is written by me in Svelte, using Sapper for routing. Each page is a separate component.', 
 			img: 'images/personalpage.png',
-			url: 'https://www.google.com',
-			giturl: 'https://github.com/ntroyer',
+			url: '',
+			giturl: 'https://github.com/ntroyer/ntroyerpersonal',
 			devicons: ['javascript', 'nodejs', 'html5', 'css3', 'yarn']
 		}
 	];
@@ -170,14 +171,14 @@
 	{#each projects as project, index}
 	<div class="project" in:fly="{{x: 200, delay: (1 + index) * 200}}">
 		<div class="project-image">
-			<a href="{project.url}" target="_blank">
+			<a href="{project.url ? project.url : '#'}" target="_blank">
 				<img src="{project.img !== '' ? project.img : 'images/placeholder.gif'}" alt="{project.name}" />
 			</a>
 		</div>
 		<table class="project-description">
 			<h2>{project.name}</h2>
 			<div class="project-image-responsive">
-				<a href="{project.url}" target="_blank">
+				<a href="{project.url ? project.url : '#'}" target="_blank">
 					<img src="{project.img !== '' ? project.img : 'images/placeholder.gif'}" alt="{project.name}" />
 				</a>
 			</div>
@@ -193,11 +194,15 @@
 					{/if}
 				{/each}
 				<a class="github-icon" href='{project.giturl}' target="_blank"><i class="devicon-github-plain"></i></a>
+				{#if project.url !== ''}
 				<a class="launch-icon" href='{project.url}' target="_blank"><i class="material-icons">launch</i></a>
+				{/if}
 			</tr>
 			<tr class="link-row">
 				<a class="github-icon" href='{project.giturl}' target="_blank"><i class="devicon-github-plain"></i></a>
+				{#if project.url !== ''}
 				<a class="launch-icon" href='{project.url}' target="_blank"><i class="material-icons">launch</i></a>
+				{/if}
 			</tr>
 		</table>
 	</div>
