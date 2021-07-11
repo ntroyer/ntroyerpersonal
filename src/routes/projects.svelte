@@ -20,13 +20,13 @@
 		margin: 1.5em;
 	}
 
-	.project-image-responsive {
-		display: none;
+	.project-image a img {
+		width: 200px;
+		height: 200px;
 	}
 
-	.project-image a img {
-		padding-top: 24px;
-		padding-left: 3px;
+	.project-image-responsive {
+		display: none;
 	}
 
 	.project-description {
@@ -149,7 +149,7 @@
 		{ 
 			name: 'Personal website', 
 			description: 'This website is written by me in Svelte, using Sapper for routing between pages. Pageload animations are done using Svelte. Each page is a separate component', 
-			img: 'logo-192.png',
+			img: 'images/personalpage.png',
 			url: 'https://www.google.com',
 			giturl: 'https://github.com/ntroyer',
 			devicons: ['javascript', 'nodejs', 'html5', 'css3', 'yarn']
